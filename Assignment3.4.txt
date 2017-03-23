@@ -17,10 +17,10 @@ Both namenodes share the edit logs .
 
 Pipeline is closed.
 Packets in the ack queue are added to the front of data queue.
-Current block in good datanodes is given a new identity and is communicated to
+Current block in good datanodes is given a new identity and it is informed to
 the namenode.
 The datanode that is failed is removed from the pipeline and a new pipeline is constructed from
-the 2 good datanodes and remaining of the block’s data is written to the good datanodes in the pipeline.
+the 2 good datanodes and remaining of the blockâ€™s data is written to the good datanodes in the pipeline.
 The namenode arranges for further replica of the block to be created on another node.
 If minimum replicas (1) are written, the write will succeed and the block is replicated 
 across the cluster until the target replication factor 3 is reached.
